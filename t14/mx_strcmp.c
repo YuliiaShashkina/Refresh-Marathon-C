@@ -1,12 +1,17 @@
 int mx_strcmp(const char *s1, const char *s2) {
-	int c = 0;
+    int i = 0;
 
-	while (s1[c] == s2[c]) {
-		if (s1[c] == '\0') {
-			return s1[c] - s2[c];
-		}
-		c++;
-	}
-	return s1[c] - s2[c];
+    while (s1[i] == s2[i]) {
+        if (s1[i] == '\0') {
+            return s1[i] - s2[i];
+        }
+        i++;
+    }
+    if (s1[i] - s2[i] > 0) {
+        return 1;
+    }
+    else {
+        return -1;
+    }
 }
 
